@@ -7,7 +7,7 @@ if($online) {
    Write-Host($unit + " is online")
    Write-Host("Copying TPM_ON folder to " + $unit + " C: Drive")
    try {
-       Copy-item "\\tech1\MisTech\SoftwareReplicated\TechApps\Tools\TPM_ON" -Destination "\\$unit\c$" -Recurse
+       Copy-item "\\{FilePath}" -Destination "\\$unit\c$" -Recurse
    } catch {
         Write-Host("Error copying over TPM folder. Might already have it?")
    }
