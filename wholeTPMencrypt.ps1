@@ -8,7 +8,7 @@ if($online) {
    Write-Host($unit + " is online")
    Write-Host("Copying TPM_ON folder to " + $unit + " C: Drive")
 
-   try { Copy-item "\\tech1\MisTech\SoftwareReplicated\TechApps\Tools\TPM_ON" -Destination "\\$unit\c$" -Recurse } 
+   try { Copy-item "\\{FilePath}" -Destination "\\$unit\c$" -Recurse } 
    catch [DirectoryExist,Microsoft.PowerShell.Commands.CopyItemCommand] { Write-Host("Error copying over TPM folder. Might already have it?") }
 
    Start-Sleep -Seconds 15
